@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ManagerViewController">
+   <children>
+      <Label layoutX="228.0" layoutY="25.0" text="Insert / Remove employee">
+         <font>
+            <Font name="SansSerif Bold" size="28.0" />
+         </font>
+      </Label>
+      <Label layoutX="11.0" layoutY="81.0" text="First Name">
+         <font>
+            <Font name="SansSerif Regular" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="fname_input" layoutX="92.0" layoutY="76.0" prefHeight="17.0" prefWidth="144.0" />
+      <Label layoutX="447.0" layoutY="82.0" text="Last Name">
+         <font>
+            <Font name="SansSerif Regular" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="lname_input" layoutX="526.0" layoutY="77.0" prefHeight="27.0" prefWidth="144.0" />
+      <Label layoutX="253.0" layoutY="80.0" text="Middle Initial">
+         <font>
+            <Font name="SansSerif Regular" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="middleName_input" layoutX="353.0" layoutY="77.0" prefHeight="23.0" prefWidth="79.0" />
+      <Label layoutX="32.0" layoutY="119.0" text="SSN">
+         <font>
+            <Font name="SansSerif Regular" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="ssn_input" layoutX="79.0" layoutY="113.0" prefHeight="27.0" prefWidth="167.0" promptText="no dashes(-)" />
+      <Label layoutX="17.0" layoutY="155.0" text="Birthdate">
+         <font>
+            <Font name="SansSerif Regular" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="birthdate_input" layoutX="92.0" layoutY="150.0" promptText="dd-mm-yy" />
+      <Label layoutX="254.0" layoutY="117.0" text="Address">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="address_input" layoutX="320.0" layoutY="113.0" prefHeight="27.0" prefWidth="470.0" />
+      <Label layoutX="688.0" layoutY="81.0" text="Sex">
+         <font>
+            <Font name="SansSerif Regular" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="sex_input" layoutX="722.0" layoutY="77.0" prefHeight="27.0" prefWidth="69.0" promptText="M/F" />
+      <Label layoutX="27.0" layoutY="193.0" text="Salary">
+         <font>
+            <Font name="SansSerif Regular" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="salary_input" layoutX="89.0" layoutY="190.0" prefHeight="23.0" prefWidth="120.0" />
+      <Label layoutX="23.0" layoutY="236.0" prefHeight="19.0" prefWidth="120.0" text="Manager's SSN" textFill="#070707">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="superssn_input" layoutX="142.0" layoutY="232.0" />
+      <Label layoutX="352.0" layoutY="235.0" text="Department">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="departmentLists" layoutX="450.0" layoutY="232.0" prefHeight="29.0" prefWidth="224.0" promptText="Choose..." />
+      <Label layoutX="270.0" layoutY="154.0" prefHeight="19.0" prefWidth="106.0" text="Email Address">
+         <font>
+            <Font name="SansSerif Regular" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="email_input" layoutX="376.0" layoutY="150.0" prefHeight="27.0" prefWidth="252.0" />
+      <Label layoutX="9.0" layoutY="479.0" text="Projects">
+         <font>
+            <Font name="SansSerif Regular" size="15.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="projectList" layoutX="86.0" layoutY="473.0" prefHeight="29.0" prefWidth="210.0" promptText="Choose..." />
+      <Label layoutX="321.0" layoutY="479.0" text="Work Hours">
+         <font>
+            <Font name="SansSerif Regular" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="workHour_input" layoutX="420.0" layoutY="474.0" />
+      <Button fx:id="assign_project_button" layoutX="614.0" layoutY="474.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="80.0" text="Assign">
+         <font>
+            <Font name="SansSerif Regular" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="removeEmployeeButton" layoutX="70.0" layoutY="555.0" mnemonicParsing="false" onAction="#removeEmployee" text="Delete Employee">
+         <font>
+            <Font name="SansSerif Regular" size="15.0" />
+         </font>
+      </Button>
+      <Label layoutX="25.0" layoutY="285.0" prefHeight="27.0" prefWidth="144.0" text="Have dependent?">
+         <font>
+            <Font name="SansSerif Regular" size="15.0" />
+         </font>
+      </Label>
+      <CheckBox fx:id="checkBox_yes" layoutX="165.0" layoutY="288.0" mnemonicParsing="false" onAction="#handleYesBox" prefHeight="19.0" prefWidth="53.0" text="Yes">
+         <font>
+            <Font name="SansSerif Regular" size="11.0" />
+         </font></CheckBox>
+      <CheckBox fx:id="checkBox_no" layoutX="239.0" layoutY="289.0" mnemonicParsing="false" onAction="#handleNoBox" prefHeight="19.0" prefWidth="43.0" text="No">
+         <font>
+            <Font name="SansSerif Regular" size="11.0" />
+         </font></CheckBox>
+      <Label layoutX="21.0" layoutY="333.0" text="Dependent's Name">
+         <font>
+            <Font name="SansSerif Regular" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="dependent_fname_input" layoutX="159.0" layoutY="330.0" prefHeight="27.0" prefWidth="179.0" promptText="Only First Name" />
+      <Label layoutX="28.0" layoutY="380.0" text="Dependent's Sex">
+         <font>
+            <Font name="SansSerif Regular" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="dependent_sex_input" layoutX="159.0" layoutY="376.0" prefHeight="29.0" prefWidth="61.0" promptText="M/F" />
+      <Label layoutX="364.0" layoutY="332.0" prefHeight="19.0" prefWidth="144.0" text="Dependent's Birthdate">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="dependent_bdate_input" layoutX="527.0" layoutY="328.0" prefHeight="27.0" prefWidth="224.0" promptText="dd-mm-yy" />
+      <Label layoutX="402.0" layoutY="380.0" text="Relationship">
+         <font>
+            <Font name="SansSerif Regular" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="dependent_relationship_input" layoutX="527.0" layoutY="375.0" prefHeight="27.0" prefWidth="224.0" />
+      <Button fx:id="addDependentButton" layoutX="324.0" layoutY="408.0" mnemonicParsing="false" text="Add Dependent">
+         <font>
+            <Font name="SansSerif Regular" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="addEmployeeButton" layoutX="629.0" layoutY="555.0" mnemonicParsing="false" text="Add Employee">
+         <font>
+            <Font name="SansSerif Regular" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="scanButton" layoutX="519.0" layoutY="555.0" mnemonicParsing="false" onAction="#scanEmployee" text="Validation">
+         <font>
+            <Font name="SansSerif Regular" size="15.0" />
+         </font></Button>
+      <Button fx:id="delete_project_button" layoutX="709.0" layoutY="474.0" mnemonicParsing="false" onAction="#deleteProject" text="Remove">
+         <font>
+            <Font name="SansSerif Regular" size="15.0" />
+         </font>
+      </Button>
+      <Line endX="100.0" layoutX="391.0" layoutY="457.0" opacity="0.5" startX="-100.0" strokeWidth="2.0" />
+      <Line endX="100.0" layoutX="392.0" layoutY="517.0" opacity="0.5" startX="-100.0" strokeWidth="2.0" />
+      <Label layoutX="304.0" layoutY="285.0" prefHeight="27.0" prefWidth="310.0" text="If yes, please enter the follwing information.">
+         <font>
+            <Font name="SansSerif Regular" size="15.0" />
+         </font>
+      </Label>
+      <Line endX="100.0" layoutX="392.0" layoutY="278.0" opacity="0.5" startX="-100.0" strokeWidth="2.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainViewController">
+   <children>
+      <Label layoutX="220.0" layoutY="142.0" prefHeight="59.0" prefWidth="384.0" text="Company Database" textAlignment="CENTER" textFill="#2023bf">
+         <font>
+            <Font name="System Bold Italic" size="42.0" />
+         </font>
+      </Label>
+      <Label layoutX="252.0" layoutY="209.0" prefHeight="59.0" prefWidth="296.0" text="Enter your social security number " textAlignment="CENTER">
+         <font>
+            <Font name="System Italic" size="21.0" />
+         </font>
+      </Label>
+      <TextField fx:id="userInput" layoutX="220.0" layoutY="337.0" prefHeight="35.0" prefWidth="318.0" promptText="Social Security Number (without dashes(-))">
+         <font>
+            <Font name="System Italic" size="18.0" />
+         </font>
+      </TextField>
+      <Button fx:id="login_button" layoutX="548.0" layoutY="337.0" mnemonicParsing="false" text="Login">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Label layoutX="179.0" layoutY="259.0" prefHeight="59.0" prefWidth="442.0" text="(Only managers are allowed to enter this system)" textAlignment="CENTER">
+         <font>
+            <Font name="System Italic" size="21.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
