@@ -46,7 +46,7 @@ public class CompanyDatabase {
 	    
 	    // create a connection
 	    try {
-	    	conn = DriverManager.getConnection("jdbc:oracle:thin:@artemis.vsnet.gmu.edu:1521/vse18c.vsnet.gmu.edu", "shwang27", "ushuptee");
+	    	conn = DriverManager.getConnection("");
 	    } catch (SQLException e) {
 	    	System.out.println("Error: unable to load driver class!");
 	    	e.printStackTrace();
