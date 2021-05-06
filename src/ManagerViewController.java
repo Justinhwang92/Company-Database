@@ -134,14 +134,12 @@ public class ManagerViewController {
 		});
 		
 		
-		// Extra credit (scan employee)
 		scanButton.setOnAction(new EventHandler<ActionEvent>() {
 			public void handle(ActionEvent event) {
 				scanEmployee(); 
 			}
 		});
 		
-		// Extra credit (delete employee)
 		// When deleting a project, the employees will also be deleted, 
 		// and check for constraint violations, and explain why a project may not be deleted
 		removeEmployeeButton.setOnAction(new EventHandler<ActionEvent>() {
@@ -150,7 +148,6 @@ public class ManagerViewController {
 			}
 		});
 		
-		// Extra credit (delete project)
 		delete_project_button.setOnAction(new EventHandler<ActionEvent>() {
 			public void handle(ActionEvent event) {
 				deleteProject();
@@ -217,7 +214,6 @@ public class ManagerViewController {
 		} 
 	}
 
-	// Extra credit (scan employee)
 	// Perform a scan of the database to verify that no employees violate the above rules
 	@FXML
 	protected void scanEmployee() {
@@ -282,7 +278,6 @@ public class ManagerViewController {
 				employValidation = false;
 			}
 			
-			// Extra credit (ask for the department)
 			// When inserting a new employee, ask for the department to which they will be assigned,
 			// and the project(s) to which they are assigned;
 			else if (departmentLists.getSelectionModel().getSelectedItem() == null) {
@@ -295,7 +290,6 @@ public class ManagerViewController {
 				employValidation = false;
 			}
 			
-			// Extra credit (2)
 			// An employee must work on at least one project controlled by his/her department.
 			else if (selectedProj.size() == 0) {
 				infoBox("Please assign at least 1 project for this employee", null, "Failed");
@@ -369,7 +363,6 @@ public class ManagerViewController {
 		}
 	}
 	
-	// Extra credit (delete employee)
 	// When removing an employee from a project, check if any constraints are violated, 
 	// and if so reject the update and explain why it was rejected.
 	@FXML
@@ -388,7 +381,6 @@ public class ManagerViewController {
 		}
 	}
 	
-	// Extra credit (violation check)
 	// When removing an employee from a project, check if any constraints 
 	// are violated, and if so reject the update and explain why it was rejected.
 	@FXML
@@ -486,7 +478,6 @@ public class ManagerViewController {
 				valid = false;
 			}
 			
-			// Extra credit
 			// An employee may not work on more than two projects managed by his/her department.
 			selectedProj.add(projectHour);
 			if(noTwoProjects(selectedProj,Integer.parseInt(departmentLists.getSelectionModel().getSelectedItem()))) {
@@ -594,7 +585,6 @@ public class ManagerViewController {
 		}
 	}
 	 
-	// Extra credit (1)
 	// An employee may not work on more than two projects managed by his/her department.
 	private Boolean noTwoProjects(ArrayList<ProjectHour> proj, int dno) {
 		int temp = 0;

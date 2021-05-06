@@ -12,12 +12,10 @@ public class FirstPart {
 	public static void main(String[] args) throws SQLException {
 		connect();
 		
-		// Part1_1
 		System.out.println("1) The employees who work in the Research department and print the employee’s last name and their SSN.\n");
 		part1_1();
 		System.out.println();
 		
-		// Part1_2
 		System.out.println("2) The employees who work in departments located in Houston and work on the project ‘ProductZ’. "
 				+ "List their last name, SSN, and the number of hours that the employee works on that project.\n");
 		part1_2();
@@ -34,7 +32,7 @@ public class FirstPart {
 	    
 	    // create a connection
 	    try {
-	    	conn = DriverManager.getConnection("jdbc:oracle:thin:@artemis.vsnet.gmu.edu:1521/vse18c.vsnet.gmu.edu", "shwang27", "ushuptee");
+	    	conn = DriverManager.getConnection("");
 	    } catch (SQLException e) {
 	    	System.out.println("Error: unable to load driver class!");
 	    	e.printStackTrace();
